@@ -465,7 +465,9 @@ button.btn:focus {
     //background-color: rgba(0, 0, 0, 0.8);
 }
 
-.speisekarteWrapperBackground {}
+.speisekarteWrapperBackground {
+    background-color: red;
+}
 
 .phoneBar {
     position: fixed;
