@@ -1,0 +1,1721 @@
+/******************* HTML *********************/
+
+img {}
+
+html {
+    overflow-x: hidden;
+    background-color: black;
+}
+
+body {
+    text-align: center;
+
+    //background: rgb(8, 0, 148);
+    //background: linear-gradient(90deg, rgba(8, 0, 148, 1) 0%, rgba(1, 1, 255, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-color: #dddddd;
+
+    background-color: #d3d3d3;
+    //background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+    //background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
+    //background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-dust.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: #ededed;
+    background-color: #ededed;
+    background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: white;
+    transition: 0.2s;
+}
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 6rem;
+    line-height: 6rem;
+    color: white;
+    margin-bottom: 0;
+    text-shadow: 2px 2px 1px black;
+    letter-spacing: 10px;
+    //padding: 100px 0;
+    //background-color: #272727;
+    //background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+h2 {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    margin: 0;
+    color: #888787;
+}
+
+h3 {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+
+
+    font-size: 2.5rem;
+    //line-height: 2.5rem;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+
+    //border-bottom: solid 1px #6a6a6a;
+    padding: 8px 8px;
+    //box-shadow: 0 8px 6px -6px #d9d9d9;
+    //background-color: #222222;
+    display: inline-block;
+    margin: 8px 0 8px 0;
+    padding: 5px 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h4 {
+    font-size: 1.6rem;
+    margin: 0 auto;
+    font-weight: 300;
+    padding: 0;
+    text-align: center;
+    font-weight: 400;
+    //font-family: 'Kaushan Script', cursive;
+}
+
+h5 {
+    color: #b9b9b9;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+.headlineUnderline {
+    height: 2px;
+    background-color: black;
+    width: 10%;
+    margin: 5px auto 30px auto;
+}
+
+.scrollBottom {
+    background-color: #333333;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    height: 50px;
+    width: 100%;
+    max-width: 1200px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    color: white;
+    font-size: 2rem;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+}
+
+/*********************** BOOTSTRAP *************************/
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0;
+}
+
+.hr {
+    margin: 20px;
+}
+
+
+/********** OVERYLAY TRYOUT ***********/
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 100;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.95);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.3s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.fa-bars {
+    font-size: 2rem;
+}
+
+.fa-bars:active {}
+
+.fab {
+    color: white;
+    font-size: 2.2rem;
+}
+
+.fab:hover {
+    color: #600700;
+}
+
+
+/********************** LOADER ****************************/
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 999;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    top: 50%;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+
+    25% {
+        height: 0%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    75% {
+        height: 100%;
+    }
+
+    100% {
+        height: 0%;
+    }
+}
+
+
+/*********************** NAVBAR ***************************/
+
+#navbar_1 {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: sticky;
+    z-index: 2;
+    top: 100px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0;
+    //padding: 4px;
+    //margin-bottom: 15px;
+    //background-color: #212121;
+    //background-color: rgba(244, 244, 244, 0.74);
+    //letter-spacing: 1px;
+    //padding: 5px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    //font-family: 'Merriweather', serif;
+    //background-color: #1d1d1d;
+    //border-bottom: solid 2px #f5f5f5;
+    //box-shadow: 0 2px 5px rgba(44, 44, 44, 0.31);
+    //box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+    //background-color: #272727;
+    //background-color: #d4d4d4;
+    //background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    //border: solid 3px rgba(222, 222, 222, 0.26);
+    border-bottom: solid 1px #e2e2e2;
+
+    //display: none;
+
+    /*NAVBAR NEW TEST REMOVE */
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    color: #151515;
+    font-family: fantasy;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+button.btn:focus {
+    box-shadow: none;
+}
+
+.nav {
+    //max-width: 600px;
+    margin: 0px auto;
+}
+
+.navWrapper {
+    width: 100%;
+    //background-color: #1d1d1d;
+    //background-color: #222222;
+    //background-image: //url("https://www.transparenttextures.com/patterns/black-linen.png");
+    //background-color: #191919;
+}
+
+.scrollByWrapper {
+    //background-color: #262626;
+    margin: 0px auto 0px auto;
+    width: 100%;
+    font-size: 1rem;
+    max-width: 800px;
+}
+
+.scrollToSelection {
+    width: 33.33%;
+    border-right: solid 1px #e2e2e2;
+}
+
+.scrollToSelection:last-child {
+    border-right: none;
+}
+
+
+/*********************** TITLE ****************************/
+
+#title {
+    //width: 1200px;
+    //margin: 57px auto 0 auto;
+
+
+    color: black;
+    width: 100%;
+}
+
+.test {
+    max-width: 1000px;
+    width: 100%;
+    z-index: 1;
+    margin: 0px auto;
+    //box-shadow: 0 3px 10px #343434;
+}
+
+.header {
+    max-width: 1200px;
+    font-size: 1rem;
+
+    //padding: 15px 0;
+}
+
+.headerItem a {
+    margin: 0px 15px;
+    color: grey;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 100%;
+    color: white;
+}
+
+.headerItem a:hover {
+    color: black;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding: 0.5rem 0;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+}
+
+.nav-link.active {
+    //border-bottom: solid 2px black;
+    color: black;
+    border-radius: none;
+}
+
+.nav-link:hover {
+    //color: black;
+    color: #868686;
+}
+
+/********************** CONTENT ***************************/
+
+#collapseExample {
+    //display: flex;
+    //justify-content: center;
+}
+
+.navbar collapse {
+    flex-grow: 2;
+}
+
+.headerPic {
+    background-color: #1c0e0e;
+    padding: 2px;
+}
+
+.speisekarteWrapper {
+    position: relative;
+
+    color: black;
+    //position: fixed;
+
+    width: 100%;
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    //flex-direction: column;
+    justify-content: center;
+
+    //overflow: hidden;
+
+    //background-color: rgba(0, 0, 0, 0.8);
+}
+
+.speisekarteWrapperBackground {}
+
+.phoneBar {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    //width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+    padding: 2px;
+    width: 100%;
+
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    display: none;
+}
+
+.adress {}
+
+.phone {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+
+.phoneNumber {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fa-mobile-screen-button {
+    padding: 10px;
+}
+
+.speisekarteWrapperLine {
+    background-color: white;
+    height: 2px;
+    width: 20%;
+    margin: 20px auto;
+}
+
+.speisekarteHeaderRight {
+
+    width: 70%;
+    text-align: left;
+    font-size: 5rem;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    //padding: 40px 0px 40px 100px;
+    //background-color: #121212;
+    //background-color: #222222;
+    //background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+.fotoSection {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    //height: 400px;
+}
+
+.fotoTest {
+    background-image: url(198152487_443294453586788_4063078726020976003_n.jpeg);
+    background-size: cover;
+    width: 220px;
+    height: 220px;
+    border: solid 3px white;
+    border-top: solid 5px white;
+    border-bottom: solid 50px white;
+    transform: rotate(4deg);
+    position: relative;
+    top: 0px;
+    left: -5%;
+}
+
+.fotoTest2 {
+    background-image: url(191847686_437230597526507_3884559355525967384_n.jpeg);
+    background-size: cover;
+    width: 220px;
+    height: 220px;
+    border: solid 3px white;
+    border-bottom: solid 50px white;
+    border-top: solid 5px white;
+    transform: rotate(-5deg);
+    position: absolute;
+    left: -10%;
+    bottom: 0%;
+    box-shadow: 0px 0px 10px black;
+}
+
+.fotoTest3 {
+    background-image: url(191847686_437230597526507_3884559355525967384_n.jpeg);
+    background-size: cover;
+    min-width: 220px;
+    height: 220px;
+    border: solid 3px white;
+    border-top: solid 5px white;
+    border-bottom: solid 50px white;
+    transform: rotate(5deg);
+    position: relative;
+    top: 0%;
+    right: 0%;
+    box-shadow: 0px 0px 10px black;
+}
+
+#wrapper {
+    padding: 5px 5px 0px 5px;
+    background-color: #f7f7f7;
+    //position: sticky;
+    //top: 0;
+    z-index: 100;
+    transition: .5s;
+    //height: 260px;
+    //position: sticky;
+    //top: 0;
+}
+
+#mobileWrapperPicture {
+    background-image: url(innen.jpeg);
+    //height: 260px;
+    height: 30vh;
+    min-height: 220px;
+    //height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    transition: .1s;
+    transition: height 1s;
+}
+
+#menuDisplay {
+    width: 100%;
+    height: 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: .2s;
+    overflow: hidden;
+    background-color: #121212;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+    box-shadow: 2px 2px 2px grey;
+}
+
+.textTest {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0 0 10px black;
+    padding: 10px;
+    text-align: center;
+    margin: 0px auto;
+    background-color: rgba(0, 0, 0, 0.29);
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    //height: 100%;
+}
+
+.speisekarteWrapperText {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.speisekarteWrapperImg {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/** .speisekarteWrapperText {
+	position: absolute;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+} **/
+
+.speisekarteWrapperHeadline {
+    color: orange;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 2rem;
+}
+
+.speisekarteWrapperBottomText {
+    text-align: left;
+    line-height: 1.4rem;
+    font-size: 1.5rem;
+    //width: 50%;
+    color: white;
+}
+
+#speisekarteWrapperLogo {
+    //margin: 5% 0;
+    border-radius: 5px;
+    filter: grayscale(20%);
+}
+
+#content {
+    width: 100%;
+}
+
+#backToTop {
+    background-color: rgba(21, 21, 21, 0.86);
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: -50px;
+    z-index: 100;
+    border-radius: 4px;
+    padding: 6px 14px;
+    outline: none;
+    border: none;
+    transition: .2s;
+    font-size: 1.2rem;
+    border: solid 1px white;
+    /*width: 40px;
+	height: 40px;
+    margin: 0px auto;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	//padding: 5px;
+	font-size: 1.5rem;
+	z-index: 100;
+	//border: solid 1px grey;
+	transition: .2s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;*/
+}
+
+#backToTop:hover {
+    border: solid 1px white;
+}
+
+.oneTwoThree {
+    margin: 0px auto;
+    justify-content: center;
+    //padding: 5% 0;
+}
+
+#section_1,
+#section_2,
+#section_3 {
+    width: 100%;
+    padding: 30px 0 0 0;
+}
+
+.menuCardInformation {
+    position: relative;
+    background-color: rgba(199, 199, 199, 0.22);
+    border: solid 1px #d0d0d0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    color: #555555;
+    margin: 30px auto 0 auto;
+}
+
+.fa-xmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.fa-xmark:hover {
+    cursor: pointer;
+}
+
+.mealOuterWrapper {}
+
+.mealOuter {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1100px;
+    min-width: 320px;
+    margin: 0 auto 40px auto;
+
+}
+
+.mealBox {
+    position: relative;
+    padding: 2% 2%;
+    //margin-bottom: 5px;
+    //font-family: serif;
+    flex: 100%;
+    max-width: 100%;
+    max-width: 900px;
+}
+
+/* .meal {
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.69);
+	border: solid 1px #ebebeb;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	transition: 0.5s;
+	margin: 0px auto;
+	text-align: center;
+	border-radius: 5px;
+	border: none;
+} */
+
+.meal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: dashed 1px #b7b7b7;
+    //border: dashed 1px #dbdbdb;
+
+    //background-color: rgba(31, 31, 31, 0.01);
+    //background-color: #f9f9f9;
+}
+
+.symbols {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-leaf {
+    position: relative;
+    color: #098309;
+
+    color: #135200;
+    color: white;
+    font-size: 0.8rem;
+    //border: solid 2px #135200;
+    background-color: #135200;
+    border-radius: 50%;
+    padding: 8px;
+    z-index: 1;
+}
+
+.fa-pepper-hot {
+    position: relative;
+    color: #c60000;
+
+    color: #931313;
+    color: white;
+    background-color: #720404;
+    //background-color: #931313;
+    font-size: 0.8rem;
+    //border: solid 2px #931313;
+    border-radius: 50%;
+    padding: 8px;
+    z-index: 1;
+
+
+    //text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000
+}
+
+.veganTooltip,
+.toolTip {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 0 10px;
+}
+
+.veganTooltipText {
+    font-size: .7rem;
+    color: green;
+    visibility: hidden;
+}
+
+.spicyTooltipText {
+    font-size: .7rem;
+    color: #c60000;
+    visibility: hidden;
+}
+
+.veganTooltip:hover .veganTooltipText {
+    visibility: visible;
+}
+
+.toolTip:hover .spicyTooltipText {
+    visibility: visible;
+}
+
+.mealHead {
+    position: relative;
+    display: flex;
+    //justify-content: center;
+    //background-color: #4d4d4d;
+    //padding: 10px 10px;
+    //background-color: #272219;
+    //background-color: #261e1e;
+    padding: 10px 0 0 0;
+    font-size: 1.7rem;
+    //padding: 5px;
+    //border-radius: 3px;
+    //background-color: #2c2c2c;
+    //background-color: #fafafa;
+}
+
+.mealHead-numberWrapper {
+    width: 20%;
+    //min-width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mealHead-number {
+    //color: white;
+    //border-radius: 2px;
+    //font-size: 2rem;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    //letter-spacing: -2px;
+    //padding: 0px 6px 0 0;
+    //margin: 5px;
+    //top: -5px;
+    //left: -5px;
+    //left: 4px;
+    //top: 4px;
+    //height: 100%;
+    //top: -1px;
+    //left: -1px;
+    //height: 40px;
+    //width: 35px;
+    height: 38px;
+    //width: 100%;
+    //box-shadow: 1px 1px 3px #797979;
+    //background-color: #222222;
+    font-family: arial;
+    font-family: 'Fira Code', monospace;
+    //background-color: #222222;
+    //border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    //letter-spacing: -5px;
+    //text-align: left;
+    //padding: 4px;
+    text-align: center;
+    font-size: 1.6rem;
+    //color: #dedede;
+    //color: #bebebe;
+    color: black;
+    //box-shadow: 2px 2px 3px #d8d8d8;
+    //border: solid 1px grey;
+    background-color: #404040;
+    padding: 4px;
+    color: white;
+    background-color: #121212;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+}
+
+#collapseVorspeisen,
+#collapseHauptspeisen {}
+
+
+
+.mealHead-name {
+    //width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    //width: 70%;
+    width: 60%;
+    //background-color: #f0f0f0;
+    text-align: left;
+    //font-family: 'Kaushan Script', cursive;
+}
+
+.mealBody {
+    //line-height: 1.2rem;
+    font-size: 0.9rem;
+    text-align: left;
+
+    //border-top: solid 1px #4d4d4d;
+    padding: 12px 0;
+    width: 80%;
+    text-align: center;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    //color: #898787;
+}
+
+.mealFooter {
+    position: relative;
+    text-align: left;
+    padding: 0px 12px 12px 12px;
+}
+
+.mealFooterLeft {}
+
+.mealFooterRight {}
+
+.priceTag {
+    font-family: arial;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 5px;
+    border-radius: 3px;
+    //width: 100px;
+    margin: 0px auto;
+    font-size: 0.9rem;
+    width: 20%;
+}
+
+.price {
+    font-size: 1rem;
+    //padding: 3px 0;
+    //border-radius: 3px;
+    margin: 0px auto;
+    //padding: 1rem;
+
+    padding: 3px 20px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    max-width: 100px;
+}
+
+.priceTest {
+    padding: 0px;
+    border-radius: 3px;
+}
+
+.wahlweise {
+    text-align: center;
+    //text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    //width: 95%;
+}
+
+.optionName {}
+
+.optionPrice {}
+
+/********** FOOTER **********/
+
+#footer {
+    position: relative;
+    width: 100%;
+
+    background-color: #1a1a1a;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+    background-color: #121212;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    z-index: 2;
+    padding: 10px 0 20px 0;
+}
+
+.footerHeadline {
+    font-size: 1.3rem;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Merriweather Sans', sans-serif;
+    //font-family: 'Oswald';
+    text-align: center;
+    line-height: 2.5rem;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.footerBody {
+    color: white;
+
+    font-size: 1rem;
+    text-align: left;
+    margin: 0px auto;
+    color: #e2e2e2;
+    padding: 10px 0;
+    max-width: 1200px;
+}
+
+.footerColumn {
+    text-align: center;
+}
+
+.footerContent {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.socialLinkWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.socialLink {
+    padding: 15px 5px;
+}
+
+.footerBottom {
+    color: grey;
+    margin: 5px 0;
+}
+
+.open {
+    margin: 0px auto;
+    max-width: 220px;
+}
+
+.openContainer {
+    display: flex;
+    width: 100%;
+}
+
+.start {
+    width: 45%;
+    text-align: left;
+}
+
+.to {
+    width: 10%;
+    text-align: center;
+}
+
+.end {
+    width: 45%;
+    text-align: right;
+}
+
+/* DELETE?
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+	//padding: 12px 0px;
+	//border-radius: 0;
+	//background-color: #000000;
+	width: 50%;
+	width: 100%;
+	//background-color: black;
+	transition: 0.5s;
+	background-color: #ffffff;
+	color: black;
+}
+
+.nav-pills .nav-link {
+	padding: 12px 0;
+	font-size: 0.9rem;
+	border-radius: 0;
+	color: #696969;
+	//width: 25%;
+	transition: 0.5s;
+	//background-color: #272727;
+	//background-color: black;
+	//background-color: #151515;
+	background-color: #f5f5f5;
+	//border-right: solid 1px #d3d3d3;
+}
+
+*/
+
+/*
+
+.nav-item {
+	border-right: solid 1px #e2e2e2;
+}
+
+.nav-item:last-child {
+	border-right: none;
+}
+
+.nav-link {
+	color: #6d6d6d;
+	font-size: 1rem;
+	border-bottom: solid 2px transparent;
+}
+
+.nav-link:hover {
+	color: black;
+	//border-bottom: solid 2px black;
+	transition: 0.5s;
+}
+
+.nav-link.active {
+	color: black;
+	border-bottom: solid 2px black;
+}	*/
+
+.nav {
+    width: 100%;
+}
+
+.scrollto {
+    //width: 33.33%;
+    //margin: 0px auto;
+    //overflow: hidden;
+    //border-right: solid 1px #e2e2e2;
+    border-radius: 0;
+
+    padding: 10px 0px;
+    //border-radius: 0;
+    background-color: #000000;
+    width: 50%;
+    width: 100%;
+    //background-color: black;
+    transition: 0.5s;
+    background-color: #f7f7f7;
+    color: #868686;
+
+}
+
+.scrollto:last-child {
+    border: none;
+}
+
+
+/*	NAVBAR ACTIVE    */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: white;
+    color: black;
+}
+
+
+
+/* .navbar-expand-md .navbar-nav .nav-link {
+	color: grey;
+	font-weight: 400;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover {
+	color: black;
+	font-weight: 400;
+} */
+
+#hauptspeisen,
+#vorspeisen,
+#extras {
+    width: 100%;
+    position: absolute;
+    //top: -60px;
+    top: -55px;
+}
+
+/************* small **************/
+
+@media (max-width: 621px) {
+    #title {}
+
+    #content {
+        position: relative;
+        //top: -80px;
+    }
+
+    .test {
+        height: 80px;
+        //background-color: rgba(0, 0, 0, 0.47);
+        //background-color: #1a1a1a;
+    }
+
+    .fa-bars {
+        color: white;
+        color: black;
+    }
+
+    .fotoSection,
+    .fotoTest3 {
+        display: none;
+    }
+
+    #wrapper {
+        display: none;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    .brand {
+        position: absolute;
+        left: 50%;
+        width: 60px;
+        margin-left: -30px !important;
+        /* 50% of your logo width */
+        display: block;
+        //box-shadow: 0 0 3px #1c1c1c;
+        //border: solid 1px black;
+    }
+
+
+    .brandInner {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        left: 50%;
+        top: 5px;
+        margin-left: -50px !important;
+        /* 50% of your logo width */
+        display: block;
+        box-shadow: 0 0px 10px #1d1d1d;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0);
+        //border: solid 1px #362424;
+        //outline: double 4px black;
+        z-index: 1;
+        //background-color: red;
+        //box-shadow: 0 0px 8px #6d6d6d;
+        //box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    .headerBelow {
+        display: none;
+    }
+
+    h1 {
+        font-size: 5rem;
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        width: 100%;
+        margin: 0px auto;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        padding: 0px 0;
+        //background-color: #e69500;
+        //background-color: rgb(240, 240, 240);
+        //box-shadow: 0px 0px 5px #222222;
+        //background-color: #212121;
+        z-index: 1;
+        margin-bottom: 10px;
+        font-weight: 100;
+    }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .mealBox {
+        flex: 100%;
+        max-width: 100%;
+        //padding: 0px 0px;
+        padding: 0 0 10% 0;
+    }
+
+    .menu {
+        padding: 0;
+    }
+
+    .headerPic {
+        display: none;
+    }
+
+    .speisekarteWrapperBackground {
+        padding: 3px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .speisekarteWrapper {
+        background-color: #121212;
+        background-color: #1c1c1c;
+        background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+        //box-shadow: 2px 2px 5px #898989;
+        //background-image: url(197622501_440152393900994_2107169479052042263_n.jpeg);
+        //height: 100vh;
+        //width: 1200px;
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        max-height: 700px;
+        background-image: url(innendarki.jpeg);
+        //box-shadow: 0px 1px 10px #747474;
+        border: solid 2px black;
+
+        //display: none;
+        //min-height: 360px;
+        //max-height: 420px;
+        overflow: hidden;
+
+        height: 100px;
+    }
+
+    .nav-link {
+        transition: 0s;
+    }
+
+}
+
+/************* medium **************/
+
+@media (min-width: 621px) {
+    #title {
+        //background-color: white;
+    }
+
+    #content {
+        position: relative;
+        top: -120px;
+    }
+
+    .test {
+        height: 120px;
+        background-color: rgba(0, 0, 0, 0.47);
+    }
+
+    .speisekarteWrapper {
+        //display: none;
+        height: 45vh;
+        min-height: 450px;
+        overflow: hidden;
+        padding: 150px 0 0 0;
+    }
+
+    .brand {
+        position: absolute;
+        left: 50%;
+        margin-left: -50px !important;
+        /* 50% of your logo width */
+        display: block;
+        //box-shadow: 0 0 6px #1c1c1c;
+        width: 100px;
+    }
+
+    #wrapper {
+        display: none;
+    }
+
+    .fotoSection,
+    .fotoTest3 {
+        display: none;
+    }
+
+
+    /* .speisekarteWrapper {
+        //display: none;
+        height: 40vh;
+        min-height: 300px;
+    } */
+
+    .fa-bars {
+        color: white;
+    }
+}
+
+/************* large **************/
+
+@media (min-width: 800px) {
+
+    .mealBox {
+        flex: 33.33%;
+        max-width: 33.33%;
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    #wrapper {
+        display: none;
+    }
+
+    .speisekarteWrapper {
+        //display: none;
+        height: 40vh;
+        min-height: 400px;
+        //height: auto;
+        //padding: 120px 0 0 0;
+    }
+
+    #navbar_1 {
+        display: none;
+    }
+
+    .fotoSection,
+    .fotoTest3 {
+        display: none;
+    }
+
+    .headerPic {
+        //position: absolute;
+        width: 500px;
+        //margin: 0px auto;
+        //left: 50%;
+        //transform: translate(-50%, 35%);
+        //border: solid 1px #191919;
+        //padding: 5px;
+        //display: block;
+        //display: none;
+    }
+
+    #speisekarteWrapperLogo {
+        display: none;
+    }
+
+    /*
+	.nav-item {
+		border: none;
+	}
+	*/
+
+    .brand {
+        //position: absolute;
+        //top: 0.5rem;
+        //box-shadow: 2px 2px 5px #c3c3c3;
+    }
+
+    .brand {
+        position: relative;
+        left: 0;
+        width: 140px;
+    }
+
+    .test {
+        height: auto;
+        background-color: rgba(255, 255, 255, 0);
+        width: 90%;
+    }
+
+    .speisekarteWrapper {
+        height: 45vh;
+        min-height: 500px;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .brand {
+        position: relative;
+        left: 0;
+        width: 140px;
+    }
+
+    #content {
+        position: relative;
+        top: 0px;
+    }
+
+    .test {
+        height: auto;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .speisekarteWrapper {
+        height: 60vh;
+        //width: 1000px;
+        overflow: visible;
+        padding: 0;
+
+        position: relative;
+        color: black;
+        //position: fixed;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0px auto;
+        padding: 30px 0 30px 0;
+        display: flex;
+        justify-content: center;
+        max-height: 500px;
+    }
+
+    .fotoSection,
+    .fotoTest3 {
+        display: block;
+    }
+
+    .mealBox {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+
+    .speisekarteWrapperBackground {
+        background-color: #1c1c1c;
+        background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+        background-color: #121212;
+        background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+        background-image: url("bgtest.jpg");
+
+    }
+
+    #speisekarteWrapperLogo {
+        display: none;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .test {
+        box-shadow: none;
+    }
+
+    .headerItem a {
+        color: grey;
+    }
+}
+
+/************* extra large **************/
+
+@media (min-width: 1200px) {
+    .brand {
+        position: relative;
+        left: 0;
+        width: 140px;
+    }
+
+    #content {
+        position: relative;
+        top: 0px;
+    }
+
+    .test {
+        height: auto;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .speisekarteWrapper {
+        height: 60vh;
+        //width: 1000px;
+        overflow: visible;
+        padding: 0;
+
+        position: relative;
+        color: black;
+        //position: fixed;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0px auto;
+        padding: 30px 0 30px 0;
+        display: flex;
+        justify-content: center;
+        max-height: 500px;
+    }
+
+    .fotoSection,
+    .fotoTest3 {
+        display: block;
+    }
+
+    .mealBox {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+
+    .speisekarteWrapperBackground {
+        background-color: #1c1c1c;
+        background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+        background-color: #000000;
+        background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+        background-color: #1a1a1a;
+        background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    }
+
+    #speisekarteWrapperLogo {
+        display: none;
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
+
+    .test {
+        box-shadow: none;
+    }
+
+    .headerItem a {
+        color: grey;
+    }
+
+}
+
+/************* EXTRA FUN ***************/
+
+.polaroid {
+    background-color: white;
+    box-shadow: 3px 2px 5px #acacac;
+    padding: 10px;
+    position: relative;
+    right: -730px;
+    transform: rotate(20deg);
+    border-radius: 2px;
+    display: inline-block;
+    width: 300px;
+
+    display: none;
+}
+
+.polaroidText {
+    margin: 10px 0 0 0;
+}
+
+.hoverTest {
+    position: absolute;
+}
